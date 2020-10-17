@@ -11,8 +11,19 @@
 #
 
 # Uncomment a feed source
-sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-sed -i '$a src-git diy https://github.com/xiaorouji/openwrt-package.git' feeds.conf.default
-sed -i '$a src-git vernesong https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
+#sed -i '$a src-git diy1 https://github.com/xiaorouji/openwrt-package.git;master' feeds.conf.default
+sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git openclash https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
+
+# 替换19.07 luci
+sed -i 's/17.01/19.07/g' feeds.conf.default
+
+# 添加ssr软件包
+git clone https://github.com/coolsnowwolf/lede.git package/lean1
+mv -f package/lean1/package/lean/microsocks package/lean
+mv -f package/lean1/package/lean/redsocks2 package/lean
+rm -rf package/lean1
