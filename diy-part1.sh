@@ -24,6 +24,6 @@ sed -i 's/17.01/19.07/g' feeds.conf.default
 
 # 添加ssr软件包
 git clone https://github.com/coolsnowwolf/lede.git package/lean1
-mv -f package/lean1/package/lean/microsocks package/lean
+#mv -f package/lean1/package/lean/microsocks package/lean
 mv -f package/lean1/package/lean/redsocks2 package/lean
 rm -rf package/lean1
