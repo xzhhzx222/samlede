@@ -21,9 +21,10 @@ sed -i '$a src-git openclash https://github.com/vernesong/OpenClash.git;master' 
 #sed -i 's/17.01/19.07/g' feeds.conf.default
 
 # 添加ssr软件包
-git clone https://github.com/coolsnowwolf/lede.git package/lean1
-mv -f package/lean1/package/lean/redsocks2 package/lean
-rm -rf package/lean1
+# git clone https://github.com/coolsnowwolf/lede.git package/lean1
+# mv -f package/lean1/package/lean/redsocks2 package/lean
+# rm -rf package/lean1
+svn co https://github.com/coolsnowwolf/lede/package/lean/redsocks2 package/lean/redsocks2
 
 # 添加helloworld软件
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/maxminddb
