@@ -16,8 +16,6 @@
 # Add a feed source
 sed -i '$a src-git ssrplus https://github.com/fw876/helloworld' feeds.conf.default
 sed -i '$a src-git openclash https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
-sed -i '$a src-git maxminddb https://github.com/jerrykuku/lua-maxminddb.git' feeds.conf.default
-sed -i '$a src-git helloworld https://github.com/jerrykuku/luci-app-vssr.git' feeds.conf.default
 
 # 替换19.07 luci
 #sed -i 's/17.01/19.07/g' feeds.conf.default
@@ -28,5 +26,5 @@ mv -f package/lean1/package/lean/redsocks2 package/lean
 rm -rf package/lean1
 
 # 添加helloworld软件
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean
-git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/helloworld
