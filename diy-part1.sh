@@ -24,7 +24,7 @@ sed -i '$a src-git openclash https://github.com/vernesong/OpenClash.git;master' 
 # git clone https://github.com/coolsnowwolf/lede.git package/lean1
 # mv -f package/lean1/package/lean/redsocks2 package/lean
 # rm -rf package/lean1
-svn co https://github.com/coolsnowwolf/lede/tree/master/package/lean/redsocks2 package/lean/redsocks2
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
 
 # 添加helloworld软件
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/maxminddb
