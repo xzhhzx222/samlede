@@ -26,3 +26,7 @@ sed -i '$a src-git helloworld https://github.com/jerrykuku/luci-app-vssr.git' fe
 git clone https://github.com/coolsnowwolf/lede.git package/lean1
 mv -f package/lean1/package/lean/redsocks2 package/lean
 rm -rf package/lean1
+
+# 添加helloworld软件
+git clone https://github.com/jerrykuku/lua-maxminddb.git
+git clone https://github.com/jerrykuku/luci-app-vssr.git
