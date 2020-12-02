@@ -28,5 +28,5 @@ mv -f package/lean1/package/lean/redsocks2 package/lean
 rm -rf package/lean1
 
 # 添加helloworld软件
-git clone https://github.com/jerrykuku/lua-maxminddb.git
-git clone https://github.com/jerrykuku/luci-app-vssr.git
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean
