@@ -23,7 +23,7 @@ sed -i 's/OpenWrt/SamLede/g' package/base-files/files/bin/config_generate
 sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:99999:7:::#g' package/base-files/files/etc/shadow
 # 更改默认主题
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-sed -i 's/luci-theme-bootstrap/luci-theme-argon-dark-mod/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collections/luci/Makefile
 # 替换libcap
 rm -rf feeds/packages/libs/libcap
 svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
