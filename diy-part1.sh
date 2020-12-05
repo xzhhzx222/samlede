@@ -17,9 +17,6 @@
 sed -i '$a src-git ssrplus https://github.com/fw876/helloworld' feeds.conf.default
 sed -i '$a src-git openclash https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
 
-# 替换19.07 luci
-#sed -i 's/17.01/19.07/g' feeds.conf.default
-
 # 添加ssr软件包
 # git clone https://github.com/coolsnowwolf/lede.git package/lean1
 # mv -f package/lean1/package/lean/redsocks2 package/lean
