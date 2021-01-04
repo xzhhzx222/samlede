@@ -38,8 +38,8 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
+#    - name: Checkout
+#      uses: actions/checkout@main
 
     - name: Initialization environment
       env:
