@@ -26,6 +26,8 @@ git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/helloworld
 # 添加redsocks2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
+# 添加familycloud
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-familycloud package/lean/luci-app-familycloud
 # 替换libcap
 rm -rf feeds/packages/libs/libcap
 svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
