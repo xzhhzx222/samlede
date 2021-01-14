@@ -22,15 +22,13 @@ sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:9
 # 更改默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collections/luci/Makefile
 # 添加helloworld
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/helloworld
+#git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/maxminddb
+#git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/helloworld
 # 添加redsocks2
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
-# 添加familycloud
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-familycloud package/lean/luci-app-familycloud
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
 # 替换libcap
-rm -rf feeds/packages/libs/libcap
-svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
+#rm -rf feeds/packages/libs/libcap
+#svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改ntp服务器
@@ -42,5 +40,5 @@ sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin
 #sed -i 's/"services"/"nas"/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
 # 移动transmission到nas下
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
-# 移动appfilter到nas下
+# 移动appfilter到control下
 sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
