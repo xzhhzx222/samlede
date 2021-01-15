@@ -42,3 +42,4 @@ sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
 # 移动appfilter到control下
 sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
+sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
