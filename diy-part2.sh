@@ -21,15 +21,18 @@ sed -i 's/OpenWrt/SamLede/g' package/base-files/files/bin/config_generate
 sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:99999:7:::#g' package/base-files/files/etc/shadow
 # 更改默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collections/luci/Makefile
-# 添加helloworld
+# 添加redsock2
 #svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
+# 添加helloworld
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/maxminddb
 #git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/helloworld
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/advanced
 # 添加dnsfilter
-git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypangy/dnsfilter
+git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
 # 添加bypass
+svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb package/garypang/lua-maxmindb
+svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/garypang/redsocks2
 git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/bypass
 # 替换libcap
 #rm -rf feeds/packages/libs/libcap
