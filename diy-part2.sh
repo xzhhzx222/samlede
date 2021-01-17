@@ -22,10 +22,15 @@ sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:9
 # 更改默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collections/luci/Makefile
 # 添加helloworld
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/maxminddb
 #git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/helloworld
-# 添加redsocks2
-#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
+# 添加advanced
+git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/advanced
+# 添加dnsfilter
+git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypangy/dnsfilter
+# 添加bypass
+git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/bypass
 # 替换libcap
 #rm -rf feeds/packages/libs/libcap
 #svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
