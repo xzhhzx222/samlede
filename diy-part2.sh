@@ -37,6 +37,7 @@ git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/byp
 # 添加docker
 svn co https://github.com/coolsnowwolf/packages/trunk/utils/docker-ce package/docker/docker-ce
 svn co https://github.com/coolsnowwolf/packages/trunk/utils/docker-compose package/docker/docker-compose
+svn co https://github.com/coolsnowwolf/packages/trunk/lang/python package/docker/python
 # 替换libcap
 #rm -rf feeds/packages/libs/libcap
 #svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
