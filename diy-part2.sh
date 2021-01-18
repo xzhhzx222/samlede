@@ -32,7 +32,8 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/adv
 # 添加lienol diy
 svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/diy/luci-app-adguardhome
 svn co https://github.com/Lienol/openwrt/trunk/package/diy/OpenAppFilter package/diy/OpenAppFilter
-svn co https://github.com/Lienol/openwrt-luci/tree/18.06/applications/luci-app-smartdns package/diy/luci-app-smartdns
+svn co https://github.com/Lienol/openwrt-luci/trunk/applications/luci-app-smartdns package/diy/luci-app-smartdns
+svn co https://github.com/Lienol/openwrt-packages/branches/main/net/smartdns package/diy/smartdns
 # 添加dnsfilter
 #git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
 # 添加bypass
