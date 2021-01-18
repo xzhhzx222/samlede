@@ -30,7 +30,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/advanced
 # 添加diy
-svn co https://github.com/Lienol/openwrt/trunk/package/diy package/diy
+svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/diy/luci-app-adguardhome
 # 添加dnsfilter
 #git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
 # 添加bypass
