@@ -29,8 +29,10 @@ sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/advanced
-# 添加diy
+# 添加lienol diy
 svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/diy/luci-app-adguardhome
+svn co https://github.com/Lienol/openwrt/trunk/package/diy/OpenAppFilter package/diy/OpenAppFilter
+svn co https://github.com/Lienol/openwrt-luci/tree/18.06/applications/luci-app-smartdns package/diy/luci-app-smartdns
 # 添加dnsfilter
 #git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
 # 添加bypass
@@ -49,6 +51,6 @@ sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/
 # 移动transmission到nas下
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
 # 移动appfilter到control下
-#sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
-#sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
+sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
+sed -i 's/network/control/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
 
