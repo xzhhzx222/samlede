@@ -18,3 +18,5 @@
 #sed -i '$a src-git ssrplus https://github.com/fw876/helloworld' feeds.conf.default
 # 添加openclash
 #sed -i '$a src-git openclash https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
+# 添加coolsonwwolf packages
+sed -i '$a src-git coolsnowwolf https://github.com/coolsnowwolf/packages.git' feeds.conf.default
