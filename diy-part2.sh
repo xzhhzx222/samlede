@@ -33,7 +33,7 @@ git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/
 # 添加bypass
 svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb package/garypang/lua-maxmindb
 svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/garypang/redsocks2
-git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/bypass
+git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/luci-app-bypass
 # 添加docker
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-docker package/docker/luci-app-docker
 # 替换libcap
