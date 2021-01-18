@@ -23,6 +23,8 @@ sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:9
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+# 取消53端口监听
+sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
 # 添加argon-config
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 # 添加advanced
