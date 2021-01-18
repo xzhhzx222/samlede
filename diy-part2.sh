@@ -29,7 +29,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collecti
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/advanced
 # 添加dnsfilter
-git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
+#git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
 # 添加bypass
 #svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb package/garypang/lua-maxmindb
 #svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/garypang/redsocks2
