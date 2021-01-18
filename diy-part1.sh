@@ -19,4 +19,4 @@ sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package.git' feeds.c
 sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
 #sed -i '$a src-git jerrykuku https://github.com/jerrykuku/luci-app-vssr.git' feeds.conf.default
 sed -i '$a src-git lisaac https://github.com/lisaac/luci-app-dockerman.git' feeds.conf.default
-sed -i '$a src-git lienolpackages https://github.com/Lienol/openwrt-packages.git;main' feeds.conf.default
+#sed -i '$a src-git lienolpackages https://github.com/Lienol/openwrt-packages.git;main' feeds.conf.default
