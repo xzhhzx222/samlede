@@ -29,6 +29,8 @@ sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/advanced
+# 添加diy
+svn co https://github.com/Lienol/openwrt/trunk/package/diy package/diy
 # 添加dnsfilter
 #git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
 # 添加bypass
