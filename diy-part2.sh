@@ -28,11 +28,11 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/advanced
 # 添加dnsfilter
-git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
+#git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
 # 添加bypass
-svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb package/garypang/lua-maxmindb
-svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/garypang/redsocks2
-git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/bypass
+#svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb package/garypang/lua-maxmindb
+#svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/garypang/redsocks2
+#git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/bypass
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改ntp服务器
