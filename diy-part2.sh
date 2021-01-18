@@ -35,6 +35,7 @@ svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb packag
 svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/garypang/redsocks2
 git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/luci-app-bypass
 # 添加docker
+svn co https://github.com/coolsnowwolf/packages/trunk/utils/docker-ce package/docker/docker-ce
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-docker package/docker/luci-app-docker
 # 替换libcap
 #rm -rf feeds/packages/libs/libcap
