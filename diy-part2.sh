@@ -31,9 +31,9 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/adv
 # 添加dnsfilter
 git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
 # 添加bypass
-svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb package/garypang/lua-maxmindb
-svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/garypang/redsocks2
-git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/luci-app-bypass
+#svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb package/garypang/lua-maxmindb
+#svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/garypang/redsocks2
+#git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/luci-app-bypass
 # 替换libcap
 #rm -rf feeds/packages/libs/libcap
 #svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
@@ -49,5 +49,5 @@ sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin
 # 移动transmission到nas下
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
 # 移动appfilter到control下
-#sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
-#sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
+sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
+sed -i 's/network/control/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
