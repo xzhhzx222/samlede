@@ -25,6 +25,7 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luc
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 # 取消53端口监听
 sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
+
 # 添加adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 # 添加advanced
@@ -51,13 +52,12 @@ sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/
 #sed -i 's/1.openwrt.pool.ntp.org/time1.cloud.tencent.com/g' package/base-files/files/bin/config_generate
 #sed -i 's/2.openwrt.pool.ntp.org/time.ustc.edu.cn/g' package/base-files/files/bin/config_generate
 #sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin/config_generate
-# 移动samba4到Nas下
-#sed -i 's/"services"/"nas"/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
-# 移动transmission到Nas下
-#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
+# 移动accesscontrol到网络下
+sed -i 's/"services"/"network"/g' package/lean/luci-app-accesscontrol/luasrc/controller/mia.lua
+sed -i 's/services/network/g' package/lean/luci-app-accesscontrol/luasrc/view/mia/mia_status.htm
 # 移动appfilter到服务下
-sed -i 's/"network"/"services"/g' package/openappfilter/luci-app-oaf/luasrc/controller/appfilter.lua
-sed -i 's/network/services/g' package/openappfilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
-# 移动appfilter到Docker下
+#sed -i 's/"network"/"services"/g' package/openappfilter/luci-app-oaf/luasrc/controller/appfilter.lua
+#sed -i 's/network/services/g' package/openappfilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
+# 移动docker到Docker下
 sed -i 's/"services"/"docker"/g' package/lean/luci-app-docker/luasrc/controller/docker.lua
 sed -i 's/services/docker/g' package/lean/luci-app-docker/luasrc/view/docker/docker_status.htm
