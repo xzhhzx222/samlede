@@ -43,8 +43,8 @@ git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
 # 添加smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 # 添加hellowworld
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/helloworld/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git package/helloworld/luci-app-vssr
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改ntp服务器
