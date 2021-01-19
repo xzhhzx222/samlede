@@ -56,8 +56,8 @@ sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/
 # 移动transmission到Nas下
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
 # 移动appfilter到服务下
-sed -i 's/"network"/"services"/g' package/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
-sed -i 's/network/services/g' package/OpenAppFilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
+sed -i 's/"network"/"services"/g' package/openappfilter/luci-app-oaf/luasrc/controller/appfilter.lua
+sed -i 's/network/services/g' package/openappfilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
 # 移动appfilter到Docker下
 sed -i 's/"services"/"docker"/g' package/lean/luci-app-docker/luasrc/controller/docker.lua
 sed -i 's/services/docker/g' package/lean/luci-app-docker/luasrc/view/docker/docker_status.htm
