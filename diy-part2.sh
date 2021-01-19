@@ -27,9 +27,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
 # 添加adguardhome
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/adguardhome feeds/AdGuardhome/adguarhome
-svn co https://github.com/Lienol/openwrt-packages/trunk/devel/packr feeds/AdGuardhome/packr
-svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/luci-app-adguarhome
+#svn co https://github.com/Lienol/openwrt-packages/trunk/net/adguardhome feeds/AdGuardhome/adguarhome
+#svn co https://github.com/Lienol/openwrt-packages/trunk/devel/packr feeds/AdGuardhome/packr
+#svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/luci-app-adguarhome
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/advanced
 # 添加argon-config
