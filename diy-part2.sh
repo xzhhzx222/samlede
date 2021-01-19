@@ -28,15 +28,17 @@ sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
 # 添加adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 # 添加advanced
-git clone https://github.com/sirpdboy/luci-app-advanced.git package/sirpdboy/advanced
+git clone https://github.com/sirpdboy/luci-app-advanced.git package/advanced
 # 添加argon-config
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 # 添加bypass
-#svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb package/garypang/lua-maxmindb
-#svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/garypang/redsocks2
-#git clone https://github.com/garypang13/luci-app-bypass.git package/garypang/bypass
+#svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb package/bypass/lua-maxmindb
+#svn co https://github.com/garypang13/openwrt-packages/trunk/redsocks2 package/bypass/redsocks2
+#git clone https://github.com/garypang13/luci-app-bypass.git package/bypass/luci-app-bypass
 # 添加dnsfilter
-#git clone https://github.com/garypang13/luci-app-dnsfilter.git package/garypang/dnsfilter
+git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
+# 添加eqos
+git clone https://github.com/garypang13/luci-app-eqos.git package/luci-app-eqos
 # 添加openappfilter
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 添加smartdns
@@ -48,10 +50,13 @@ sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/
 #sed -i 's/1.openwrt.pool.ntp.org/time1.cloud.tencent.com/g' package/base-files/files/bin/config_generate
 #sed -i 's/2.openwrt.pool.ntp.org/time.ustc.edu.cn/g' package/base-files/files/bin/config_generate
 #sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin/config_generate
-# 移动samba4到nas下
+# 移动samba4到Nas下
 #sed -i 's/"services"/"nas"/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
-# 移动transmission到nas下
+# 移动transmission到Nas下
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
-# 移动appfilter到control下
+# 移动appfilter到服务下
 sed -i 's/"network"/"services"/g' package/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
 sed -i 's/network/services/g' package/OpenAppFilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
+# 移动appfilter到Docker下
+sed -i 's/"services"/"docker"/g' package/lean/luci-app-docker/luasrc/controller/docker.lua
+sed -i 's/services/docker/g' package/lean/luci-app-docker/luasrc/view/docker/docker_status.htm
