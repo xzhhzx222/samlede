@@ -59,6 +59,9 @@ sed -i 's/services/network/g' package/lean/luci-app-accesscontrol/luasrc/view/mi
 # 移动appfilter到服务下
 #sed -i 's/"network"/"services"/g' package/openappfilter/luci-app-oaf/luasrc/controller/appfilter.lua
 #sed -i 's/network/services/g' package/openappfilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
+# 移动aria2到Nas下
+sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-aria2/luasrc/controller/aria2.lua
+sed -i 's/services/nas/g' package/feeds/luci/luci-app-aria2/luasrc/view/aria2/overview_status.htm
 # 移动docker到Docker下
 sed -i 's/"services"/"docker"/g' package/lean/luci-app-docker/luasrc/controller/docker.lua
 sed -i 's/services/docker/g' package/lean/luci-app-docker/luasrc/view/docker/docker_status.htm
