@@ -14,6 +14,6 @@
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-sed -i '$a src-git vernesong https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
+#sed -i '$a src-git vernesong https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
 sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
 sed -i '$a src-git lisaac https://github.com/lisaac/luci-app-dockerman.git' feeds.conf.default
