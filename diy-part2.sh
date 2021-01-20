@@ -41,8 +41,8 @@ git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-
 # 添加smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 # 添加hellowworld
-#git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
-#git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
 # 添加openappfilter
 git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
 
