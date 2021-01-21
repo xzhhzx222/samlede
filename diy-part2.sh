@@ -25,8 +25,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collecti
 # 添加redsock2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
 # 替换libcap
-#rm -rf feeds/packages/libs/libcap
-#svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
+#rm -rf packages/feeds/packages/libcap
+#svn co https://github.com/openwrt/packages/trunk/libs/libcap packages/feeds/packages/libcap
 
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
@@ -39,6 +39,8 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-adv
 # 添加helloworld
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
+# 添加jd-dailybonus
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/vssr/luci-app-jd-dailybonus
 
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
