@@ -33,7 +33,7 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-adv
 # 添加argon-config
 #git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 # 添加bypass
-#git clone https://github.com/garypang13/luci-app-bypass.git package/bypass/luci-app-bypass
+#git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
 # 添加dnsfilter
 #git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # 添加eqos
