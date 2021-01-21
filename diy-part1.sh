@@ -14,7 +14,7 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-# 添加ssr plus
-#sed -i '$a src-git ssrplus https://github.com/fw876/helloworld' feeds.conf.default
 # 添加openclash
 #sed -i '$a src-git openclash https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
+# 添加ssr plus
+#sed -i '$a src-git ssrplus https://github.com/fw876/helloworld' feeds.conf.default
