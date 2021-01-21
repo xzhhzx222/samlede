@@ -23,15 +23,15 @@ sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:9
 sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collections/luci/Makefile
 
 # 添加redsock2
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/redsocks2
 # 替换libcap
-#rm -rf packages/feeds/packages/libcap
-#svn co https://github.com/openwrt/packages/trunk/libs/libcap packages/feeds/packages/libcap
+#rm -rf package/feeds/packages/libcap
+#svn co https://github.com/openwrt/packages/trunk/libs/libcap package/libcap
 
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
 # 添加bypass
-#git clone https://github.com/garypang13/luci-app-bypass.git package/bypass/luci-app-bypass
+#git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
 # 添加dnsfilter
 #git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # 添加eqos
