@@ -23,7 +23,7 @@ sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:9
 sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collections/luci/Makefile
 
 # 添加redsock2
-#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/redsocks2
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/redsocks2
 # 替换libcap
 #rm -rf package/feeds/packages/libcap
 #svn co https://github.com/openwrt/packages/trunk/libs/libcap package/libcap
