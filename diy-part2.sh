@@ -54,8 +54,8 @@ sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin
 sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
 sed -i 's/network/control/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
 # 移动aria2到Nas下
-sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-aria2/luasrc/controller/aria2.lua
-sed -i 's/services/nas/g' package/feeds/luci/luci-app-aria2/luasrc/view/aria2/overview_status.htm
+#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-aria2/luasrc/controller/aria2.lua
+#sed -i 's/services/nas/g' package/feeds/luci/luci-app-aria2/luasrc/view/aria2/overview_status.htm
 # 移动docker到Docker下
 #sed -i 's/"services"/"docker"/g' package/lean/luci-app-docker/luasrc/controller/docker.lua
 #sed -i 's/services/docker/g' package/lean/luci-app-docker/luasrc/view/docker/docker_status.htm
@@ -65,6 +65,6 @@ sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_
 # 移动samba到Nas下
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba/luasrc/controller/samba.lua
 # 移动samba4到Nas下
-sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba4/luasrc/controller/samba4.lua
+#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba4/luasrc/controller/samba4.lua
 # 移动transmission到nas下
-sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
+#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
