@@ -68,3 +68,6 @@ sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba4/luasrc/controller/samba4.lua
 # 移动transmission到nas下
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-transmission/luasrc/controller/transmission.lua
+# 移动vsftpd到服务下
+sed -i 's/"nas"/"services"/g' package/lean/luci-app-vsftpd/luasrc/controller/vsftpd.lua
+sed -i 's/"NAS"/"FTP"/g' package/lean/luci-app-vsftpd/luasrc/controller/vsftpd.lua
