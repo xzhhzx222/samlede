@@ -33,7 +33,7 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-adv
 # 添加bypass
 #git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
 # 添加dnsfilter
-#git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
+git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # 添加eqos
 #git clone https://github.com/garypang13/luci-app-eqos.git package/luci-app-eqos
 # 添加helloworld
