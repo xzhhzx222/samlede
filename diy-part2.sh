@@ -62,8 +62,8 @@ sed -i '$a dhcp-option=60,00:00:01:06:68:75:61:71:69:6E:02:0A:48:47:55:34:32:31:
 sed -i 's/"services"/"network"/g' package/lean/luci-app-accesscontrol/luasrc/controller/mia.lua
 sed -i 's/services/network/g' package/lean/luci-app-accesscontrol/luasrc/view/mia/mia_status.htm
 # 移动aria2到Nas下
-sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-aria2/luasrc/controller/aria2.lua
-sed -i 's/services/nas/g' package/feeds/luci/luci-app-aria2/luasrc/view/aria2/overview_status.htm
+#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-aria2/luasrc/controller/aria2.lua
+#sed -i 's/services/nas/g' package/feeds/luci/luci-app-aria2/luasrc/view/aria2/overview_status.htm
 # 移动docker到Docker下
 sed -i 's/"services"/"docker"/g' package/lean/luci-app-docker/luasrc/controller/docker.lua
 sed -i 's/services/docker/g' package/lean/luci-app-docker/luasrc/view/docker/docker_status.htm
@@ -71,7 +71,7 @@ sed -i 's/services/docker/g' package/lean/luci-app-docker/luasrc/view/docker/doc
 sed -i 's/"services"/"network"/g' package/feeds/luci/luci-app-upnp/luasrc/controller/upnp.lua
 sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_status.htm
 # 移动samba到Nas下
-sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba/luasrc/controller/samba.lua
+#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba/luasrc/controller/samba.lua
 # 移动samba4到Nas下
 #sed -i 's/"services"/"nas"/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
 
