@@ -28,7 +28,7 @@ sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
 # 允许防火墙转发
 sed -i '0,/REJECT/s//ACCEPT/' package/network/config/firewall/files/firewall.config
 # 默认开启upnp
-sed -i '0,/0/s//1/' feeds/packages/net/miniupnpd/files/upnpd.config
+sed -i '0,/0/s//1/' package/feeds/packages/miniupnpd/files/upnpd.config
 
 # 添加adguardhome
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
