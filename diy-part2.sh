@@ -30,6 +30,8 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package
 # 替换luci-lib-docker
 rm -rf package/diy/luci-lib-docker
 git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
+# 添加docker-ce-ce
+svn co https://github.com/coolsnowwolf/packages/trunk/utils/docker-ce package/docker-ce
 
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
