@@ -49,6 +49,8 @@ git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxmin
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
 # 添加openappfilter
 #git clone .gihttps://github.com/destan19/OpenAppFiltert package/openappfilter
+# 添加ttnode
+git clone https://github.com/jerrykuku/luci-app-ttnode.git package/luci-app-ttnode
 
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
