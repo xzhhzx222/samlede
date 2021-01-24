@@ -49,6 +49,8 @@ sed -i 's/0.openwrt.pool.ntp.org/ntp1.aliyun.com/g' package/base-files/files/bin
 sed -i 's/1.openwrt.pool.ntp.org/time1.cloud.tencent.com/g' package/base-files/files/bin/config_generate
 sed -i 's/2.openwrt.pool.ntp.org/time.ustc.edu.cn/g' package/base-files/files/bin/config_generate
 sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin/config_generate
+# 默认开启fullcone nat
+sed -i '0,/0/s//1/' package/network/config/firewall/files/firewall.config
 
 # 移动appfilter到管控下
 sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
