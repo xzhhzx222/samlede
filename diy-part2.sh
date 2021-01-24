@@ -44,7 +44,7 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-a
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
 # 添加openappfilter
-git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
+#git clone .gihttps://github.com/destan19/OpenAppFiltert package/openappfilter
 
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
