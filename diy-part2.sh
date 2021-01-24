@@ -27,19 +27,11 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package
 # 替换libcap
 #rm -rf package/feeds/packages/libcap
 #svn co https://github.com/openwrt/packages/trunk/libs/libcap package/libcap
-# 替换luci-lib-docker
-rm -rf package/diy/luci-lib-docker
-git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
-# 添加docker-ce-ce
-svn co https://github.com/coolsnowwolf/packages/trunk/utils/docker-ce package/docker-ce
 
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
 # 添加bypass
 #git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
-# 添加dockerman
-rm -rf package/diy/luci-app-dockerman
-git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
 # 添加dnsfilter
 git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # 添加eqos
