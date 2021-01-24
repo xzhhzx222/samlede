@@ -32,6 +32,9 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
 # 添加bypass
 #git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
+# 添加dockerman
+rm -rf package/diy/luci-app-dockerman
+git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
 # 添加dnsfilter
 git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # 添加eqos
@@ -41,6 +44,8 @@ git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxmin
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
 # 添加jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/vssr/luci-app-jd-dailybonus
+# 添加ttnode
+git clone https://github.com/jerrykuku/luci-app-ttnode.git package/luci-app-ttnode
 
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
