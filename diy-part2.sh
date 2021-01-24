@@ -25,6 +25,10 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luc
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 # 取消53端口监听
 sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
+# 允许防火墙转发
+sed -i '0,/REJECT/s//ACCEPT/' package/network/config/firewall/files/firewall.config
+# 默认开启upnp
+sed -i '0,/0/s//1/' feeds/packages/net/miniupnpd/files/upnpd.config
 
 # 添加adguardhome
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
