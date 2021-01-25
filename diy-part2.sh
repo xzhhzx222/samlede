@@ -40,7 +40,7 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-adv
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
 #git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
 # 添加jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/vssr/luci-app-jd-dailybonus
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 # 添加ttnode
 git clone https://github.com/jerrykuku/luci-app-ttnode.git package/luci-app-ttnode
 
