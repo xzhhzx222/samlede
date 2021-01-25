@@ -35,6 +35,10 @@ sed -i '$a dhcp-option-force=125,00:00:00:00:1a:02:06:48:47:57:2d:43:54:03:04:5a
 sed -i '$a dhcp-option=15' package/network/services/dnsmasq/files/dnsmasq.conf
 sed -i '$a dhcp-option=28' package/network/services/dnsmasq/files/dnsmasq.conf
 sed -i '$a dhcp-option=60,00:00:01:06:68:75:61:71:69:6E:02:0A:48:47:55:34:32:31:4E:20:76:33:03:0A:48:47:55:34:32:31:4E:20:76:33:04:10:32:30:30:2E:55:59:59:2E:30:2E:41:2E:30:2E:53:48:05:04:00:01:00:50' package/network/services/dnsmasq/files/dnsmasq.conf
+# 允许外网访问
+sed -i 's/option rfc1918_filter 1/option rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
+# 关闭https重定向
+sed -i '0,/1/s//0/' package/network/services/uhttpd/files/uhttpd.config
 
 # 添加redsock2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/redsocks2
