@@ -21,8 +21,6 @@ sed -i 's/OpenWrt/SamLede/g' package/base-files/files/bin/config_generate
 sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:99999:7:::#g' package/base-files/files/etc/shadow
 # 更改默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collections/luci/Makefile
-# 允许防火墙转发
-sed -i '0,/REJECT/s//ACCEPT/' package/network/config/firewall/files/firewall.config
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改ntp服务器
