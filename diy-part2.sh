@@ -36,6 +36,12 @@ sed -i '$a dhcp-option=28' package/network/services/dnsmasq/files/dnsmasq.conf
 sed -i '$a dhcp-option=60,00:00:01:06:68:75:61:71:69:6E:02:0A:48:47:55:34:32:31:4E:20:76:33:03:0A:48:47:55:34:32:31:4E:20:76:33:04:10:32:30:30:2E:55:59:59:2E:30:2E:41:2E:30:2E:53:48:05:04:00:01:00:50' package/network/services/dnsmasq/files/dnsmasq.conf
 # 允许外网访问
 sed -i 's/option rfc1918_filter 1/option rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
+# 顺序分配ip
+sed -i '/dnsmasq/a\option sequential_ip 1' package/network/services/dnsmasq/files/dhcp.conf
+sed -i 's/\(option sequential_ip\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
+# 禁用dns缓存
+sed -i '/dnsmasq/a\option cachesize 0' package/network/services/dnsmasq/files/dhcp.conf
+sed -i 's/\(option cachesize\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
 
 # 添加adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
