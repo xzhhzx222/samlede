@@ -42,6 +42,12 @@ sed -i 's/\(option sequential_ip\)/\t\1/' package/network/services/dnsmasq/files
 # 禁用dns缓存
 sed -i '/dnsmasq/a\option cachesize 0' package/network/services/dnsmasq/files/dhcp.conf
 sed -i 's/\(option cachesize\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
+# 开启noresolv
+sed -i '/dnsmasq/a\option noresolv 0' package/network/services/dnsmasq/files/dhcp.conf
+sed -i 's/\(option noresolv\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
+# 绑定53端口
+sed -i '/dnsmasq/a\option port 53' package/network/services/dnsmasq/files/dhcp.conf
+sed -i 's/\(option port\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
 
 # 添加adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
