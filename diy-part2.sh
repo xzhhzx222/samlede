@@ -25,7 +25,7 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luc
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 # 取消53端口监听
 sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
-# 默认开启upnp
+# 开启upnp
 sed -i '0,/0/s//1/' package/feeds/packages/miniupnpd/files/upnpd.config
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
@@ -60,16 +60,13 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-a
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
 #git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
 # 添加openappfilter
-#git clone .gihttps://github.com/destan19/OpenAppFiltert package/openappfilter
+git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
 # 添加ttnode ###DEBUG###
 #git clone https://github.com/jerrykuku/luci-app-ttnode.git package/luci-app-ttnode
 
 # 移动accesscontrol到网络下
 sed -i 's/"services"/"network"/g' package/lean/luci-app-accesscontrol/luasrc/controller/mia.lua
 sed -i 's/services/network/g' package/lean/luci-app-accesscontrol/luasrc/view/mia/mia_status.htm
-# 移动aria2到Nas下
-#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-aria2/luasrc/controller/aria2.lua
-#sed -i 's/services/nas/g' package/feeds/luci/luci-app-aria2/luasrc/view/aria2/overview_status.htm
 # 移动docker到Docker下
 sed -i 's/"services"/"docker"/g' package/lean/luci-app-docker/luasrc/controller/docker.lua
 sed -i 's/services/docker/g' package/lean/luci-app-docker/luasrc/view/docker/docker_status.htm
@@ -79,4 +76,4 @@ sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_
 # 移动samba到Nas下
 #sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba/luasrc/controller/samba.lua
 # 移动samba4到Nas下
-#sed -i 's/"services"/"nas"/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
+sed -i 's/"services"/"nas"/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
