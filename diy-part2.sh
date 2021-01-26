@@ -57,7 +57,7 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-a
 # 添加openappfilter
 git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
 # 添加ttnode ###DEBUG###
-#git clone https://github.com/jerrykuku/luci-app-ttnode.git package/luci-app-ttnode
+git clone https://github.com/jerrykuku/luci-app-ttnode.git package/luci-app-ttnode
 
 # 移动accesscontrol到网络下
 sed -i 's/"services"/"network"/g' package/lean/luci-app-accesscontrol/luasrc/controller/mia.lua
