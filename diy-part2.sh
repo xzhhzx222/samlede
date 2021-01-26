@@ -29,11 +29,6 @@ sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
 sed -i '0,/0/s//1/' package/feeds/packages/miniupnpd/files/upnpd.config
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
-# 修改ntp服务器
-#sed -i 's/0.openwrt.pool.ntp.org/ntp1.aliyun.com/g' package/base-files/files/bin/config_generate
-#sed -i 's/1.openwrt.pool.ntp.org/time1.cloud.tencent.com/g' package/base-files/files/bin/config_generate
-#sed -i 's/2.openwrt.pool.ntp.org/time.ustc.edu.cn/g' package/base-files/files/bin/config_generate
-#sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin/config_generate
 # dnsmasq支持iptv
 sed -i '$a dhcp-option-force=125,00:00:00:00:1a:02:06:48:47:57:2d:43:54:03:04:5a:58:48:4e:0a:02:20:00:0b:02:00:55:0d:02:00:2e' package/network/services/dnsmasq/files/dnsmasq.conf
 sed -i '$a dhcp-option=15' package/network/services/dnsmasq/files/dnsmasq.conf
@@ -47,7 +42,7 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
 # 添加argon-config
-#git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 # 添加bypass
 #git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
 # 添加dnsfilter
