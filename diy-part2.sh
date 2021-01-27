@@ -25,6 +25,8 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luc
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 # 取消53端口监听
 sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
+# 开启防火墙转发
+sed -i '0,/REJECT/s//ACCEPT/' package/network/config/firewall/files/firewall.config
 # 开启upnp
 sed -i '0,/0/s//1/' package/feeds/packages/miniupnpd/files/upnpd.config
 # sfe开启bbr
