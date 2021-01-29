@@ -52,7 +52,7 @@ sed -i '/dnsmasq/a\option port 53' package/network/services/dnsmasq/files/dhcp.c
 sed -i 's/\(option port\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
 
 # 添加adguardhome
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+#git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
 # 添加argon-config
@@ -64,7 +64,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 # 添加eqos
 #git clone https://github.com/garypang13/luci-app-eqos.git package/luci-app-eqos
 # 添加smartdns
-git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+#git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 # 添加hellowworld
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
 #git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
@@ -83,6 +83,6 @@ sed -i 's/services/docker/g' package/lean/luci-app-docker/luasrc/view/docker/doc
 sed -i 's/"services"/"network"/g' package/feeds/luci/luci-app-upnp/luasrc/controller/upnp.lua
 sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_status.htm
 # 移动samba到Nas下
-sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba/luasrc/controller/samba.lua
+#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba/luasrc/controller/samba.lua
 # 移动samba4到Nas下
 #sed -i 's/"services"/"nas"/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
