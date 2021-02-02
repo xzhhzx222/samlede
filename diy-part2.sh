@@ -64,7 +64,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 # 添加eqos
 #git clone https://github.com/garypang13/luci-app-eqos.git package/luci-app-eqos
 # 添加smartdns
-git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+#git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 # 添加hellowworld
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
 #git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
