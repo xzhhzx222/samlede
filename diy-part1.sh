@@ -15,7 +15,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
 # 添加dockerman
-sed -i '$a src-git lisaac https://github.com/lisaac/luci-app-dockerman.git' feeds.conf.default
+#sed -i '$a src-git lisaac https://github.com/lisaac/luci-app-dockerman.git' feeds.conf.default
 # 添加openclash
 #sed -i '$a src-git vernesong https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
 # 添加passwall
