@@ -57,23 +57,8 @@ sed -i 's/\(option cachesize\)/\t\1/' package/network/services/dnsmasq/files/dhc
 sed -i '0,/100/s//20/' package/network/services/dnsmasq/files/dhcp.conf
 sed -i '0,/150/s//50/' package/network/services/dnsmasq/files/dhcp.conf
 
-
-# 添加dns2socks
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks package/ssrplus/dns2socks
-# 添加microsocks
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks package/ssrplus/microsocks
-# 添加pdnsd-alt
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt package/ssrplus/pdnsd-alt
 # 添加redsock2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/ssrplus/redsocks2
-# 添加shadowsocksr-libev
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev package/ssrplus/shadowsocksr-libev
-# 添加simple-obfs
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs package/ssrplus/simple-obfs
-# 添加v2ray-plugin
-svn co https://github.com/coolsnowwolf/lede/tree/master/package/lean/v2ray-plugin package/ssrplus/v2ray-plugin
-
-
 # 替换libcap
 #rm -rf package/feeds/packages/libcap
 #svn co https://github.com/openwrt/packages/trunk/libs/libcap package/libcap
