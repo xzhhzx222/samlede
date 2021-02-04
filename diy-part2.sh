@@ -77,7 +77,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 # 添加jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 # 添加ttnode
-git clone https://github.com/jerrykuku/luci-app-ttnode.git package/luci-app-ttnode
+#git clone https://github.com/jerrykuku/luci-app-ttnode.git package/luci-app-ttnode
 
 # 移动appfilter到管控下
 sed -i 's/"network"/"control"/g' package/diy/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
