@@ -20,9 +20,10 @@ sed -i 's/OpenWrt/SamLede/g' package/base-files/files/bin/config_generate
 # 修改默认root密码
 sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:99999:7:::#g' package/base-files/files/etc/shadow
 # 更改默认主题
-rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+#rm -rf package/lean/luci-theme-argon
+#git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collections/luci/Makefile
 # 取消53端口监听
 sed -i 's/iptables/#&/' package/lean/default-settings/files/zzz-default-settings
 # 开启防火墙转发
