@@ -22,7 +22,7 @@ sed -i 's/0.openwrt.pool.ntp.org/ntp1.aliyun.com/g' package/base-files/files/bin
 sed -i 's/1.openwrt.pool.ntp.org/time1.cloud.tencent.com/g' package/base-files/files/bin/config_generate
 sed -i 's/2.openwrt.pool.ntp.org/time.ustc.edu.cn/g' package/base-files/files/bin/config_generate
 sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin/config_generate
-# 调整dns缓存
+# 禁用dns缓存
 sed -i '/dnsmasq/a\option cachesize 0' package/network/services/dnsmasq/files/dhcp.conf
 sed -i 's/\(option cachesize\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
 # 顺序分配ip
@@ -31,7 +31,7 @@ sed -i 's/\(option sequential_ip\)/\t\1/' package/network/services/dnsmasq/files
 # 调整ip范围
 sed -i '/start/s/100/20/' package/network/services/dnsmasq/files/dhcp.conf
 sed -i '/limit/s/150/50/' package/network/services/dnsmasq/files/dhcp.conf
-# dnsmasq支持iptv
+# 支持iptv
 sed -i '$a dhcp-option-force=125,00:00:00:00:1a:02:06:48:47:57:2d:43:54:03:04:5a:58:48:4e:0a:02:20:00:0b:02:00:55:0d:02:00:2e' package/network/services/dnsmasq/files/dnsmasq.conf
 sed -i '$a dhcp-option=15' package/network/services/dnsmasq/files/dnsmasq.conf
 sed -i '$a dhcp-option=28' package/network/services/dnsmasq/files/dnsmasq.conf
@@ -50,9 +50,9 @@ sed -i 's/rfc1908_filter 1/rfc1908_filter 0/g' package/network/services/uhttpd/f
 # 开启upnp
 sed -i '/enabled/s/0/1/g' package/feeds/packages/miniupnpd/files/upnpd.config
 # sfe开启bbr
-sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
+sed -i '/bbr/s/0/1/g' package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改默认root密码
-sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:99999:7:::#g' package/base-files/files/etc/shadow
+sed -i 's#root::0#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415#g' package/base-files/files/etc/shadow
 # 设置用户密码
 sed -i '$a li:$1$Ow7vwy1O$lCGrGnn4g3YKBCFQ60/yJ.:18664:0:99999:7:::' package/base-files/files/etc/shadow
 sed -i '$a sophie:$1$QSEsYP5O$HphTBwlP28deKNymcaKFf0:18664:0:99999:7:::' package/base-files/files/etc/shadow
