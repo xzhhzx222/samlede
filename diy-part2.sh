@@ -40,20 +40,27 @@ sed -i '$a dhcp-option=60,00:00:01:06:68:75:61:71:69:6E:02:0A:48:47:55:34:32:31:
 sed -i '/fullcone/s/0/1/g' package/network/config/firewall/files/firewall.config
 # 开启syn_flood
 sed -i '/syn_flood/s/0/1/g' package/network/config/firewall/files/firewall.config
+# 添加用户
+sed -i '$a li:x:1000:100:li:/mnt/homes/li:/bin/false' package/base-files/files/etc/passwd
+sed -i '$a sophie:x:1001:100:sophie:/mnt/homes/sophie:/bin/false' package/base-files/files/etc/passwd
+sed -i '$a xzhhzx222:x:1002:100:xzhhzx222:/mnt/homes:/bin/false' package/base-files/files/etc/passwd
+sed -i '$a huhan:x:1003:100:huhan:/mnt/homes/huhan:/bin/false' package/base-files/files/etc/passwd
 # 允许外网访问
-sed -i '/rfc1918_filter/s/1/0/g' package/network/services/uhttpd/files/uhttpd.config
+sed -i 's/rfc1908_filter 1/rfc1908_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
 # 开启upnp
 sed -i '/enabled/s/0/1/g' package/feeds/packages/miniupnpd/files/upnpd.config
 # sfe开启bbr
 sed -i "s/option bbr '0'"/"option bbr '1'/g" package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改默认root密码
 sed -i 's#root::0:0:99999:7:::#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415:0:99999:7:::#g' package/base-files/files/etc/shadow
+# 设置用户密码
+sed -i '$a li:$1$Ow7vwy1O$lCGrGnn4g3YKBCFQ60/yJ.:18664:0:99999:7:::' package/base-files/files/etc/shadow
+sed -i '$a sophie:$1$QSEsYP5O$HphTBwlP28deKNymcaKFf0:18664:0:99999:7:::' package/base-files/files/etc/shadow
+sed -i '$a xzhhzx222:$1$3L7KoROG$MUcqm4H6jza4/83CBOsSH/:18664:0:99999:7:::' package/base-files/files/etc/shadow
+sed -i '$a huhan:$1$VVM/wBRG$YhZt0UGd5ciSzNME7sV/c1:18665:0:99999:7:::' package/base-files/files/etc/shadow
 
 # 添加redsock2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/ssrplus/redsocks2
-# 替换libcap
-#rm -rf package/feeds/packages/libcap
-#svn co https://github.com/openwrt/packages/trunk/libs/libcap package/libcap
 
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
@@ -78,9 +85,9 @@ rm -rf package/feeds/luci/luci-theme-argon-light-mod
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
 
-# 移动appfilter到管控下
-sed -i 's/"network"/"control"/g' package/openAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
-sed -i 's/network/control/g' package/openAppFilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
+# 移动appfilter到服务下
+sed -i 's/"network"/"services"/g' package/openappfilter/luci-app-oaf/luasrc/controller/appfilter.lua
+sed -i 's/network/services/g' package/openappfilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
 # 移动upnp到网络下
 sed -i 's/"services"/"network"/g' package/feeds/luci/luci-app-upnp/luasrc/controller/upnp.lua
 sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_status.htm
