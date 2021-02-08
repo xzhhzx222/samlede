@@ -49,6 +49,9 @@ sed -i '$a huhan:x:1003:100:huhan:/mnt/homes/huhan:/bin/false' package/base-file
 sed -i 's/rfc1918_filter 1/rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
 # 开启upnp
 sed -i '/enabled/s/0/1/g' package/feeds/packages/miniupnpd/files/upnpd.config
+# 更改samba4配置
+rm -rf package/feeds/packages/samba4/files/smb.conf.template
+svn co https://github.com/xzhhzx222/samlede/trunk/etc/samba/smb.conf.template package/feeds/packages/samba4/files
 # sfe开启bbr
 sed -i '/bbr/s/0/1/g' package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改默认root密码
