@@ -46,7 +46,7 @@ sed -i '$a sophie:x:1001:100:sophie:/mnt/homes/sophie:/bin/false' package/base-f
 sed -i '$a xzhhzx222:x:1002:100:xzhhzx222:/mnt/homes:/bin/false' package/base-files/files/etc/passwd
 sed -i '$a huhan:x:1003:100:huhan:/mnt/homes/huhan:/bin/false' package/base-files/files/etc/passwd
 # 允许外网访问
-sed -i 's/rfc1908_filter 1/rfc1908_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
+sed -i 's/rfc1918_filter 1/rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
 # 开启upnp
 sed -i '/enabled/s/0/1/g' package/feeds/packages/miniupnpd/files/upnpd.config
 # sfe开启bbr
