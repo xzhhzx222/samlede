@@ -14,7 +14,7 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_generate
 # 修改默认主机名称
 sed -i 's/OpenWrt/SamLede/g' package/base-files/files/bin/config_generate
 # 修改ntp服务器
@@ -41,33 +41,33 @@ sed -i '/fullcone/s/0/1/g' package/network/config/firewall/files/firewall.config
 # 开启syn_flood
 sed -i '/syn_flood/s/0/1/g' package/network/config/firewall/files/firewall.config
 # 添加用户
-# sed -i '$a li:x:1000:100:li:/mnt/homes/li:/bin/false' package/base-files/files/etc/passwd
-# sed -i '$a sophie:x:1001:100:sophie:/mnt/homes/sophie:/bin/false' package/base-files/files/etc/passwd
-# sed -i '$a xzhhzx222:x:1002:100:xzhhzx222:/mnt/homes:/bin/false' package/base-files/files/etc/passwd
-# sed -i '$a huhan:x:1003:100:huhan:/mnt/homes/huhan:/bin/false' package/base-files/files/etc/passwd
+sed -i '$a li:x:1000:100:li:/mnt/homes/li:/bin/false' package/base-files/files/etc/passwd
+sed -i '$a sophie:x:1001:100:sophie:/mnt/homes/sophie:/bin/false' package/base-files/files/etc/passwd
+sed -i '$a xzhhzx222:x:1002:100:xzhhzx222:/mnt/homes:/bin/false' package/base-files/files/etc/passwd
+sed -i '$a huhan:x:1003:100:huhan:/mnt/homes/huhan:/bin/false' package/base-files/files/etc/passwd
 # 配置samba4
-# svn co https://github.com/xzhhzx222/samlede/trunk/etc package/base-files/files/etc
-# rm -rf package/feeds/packages/samba4/files/smb.conf.template
-# mv package/base-files/files/etc/samba/smb.conf.template package/feeds/packages/samba4/files
+svn co https://github.com/xzhhzx222/samlede/trunk/etc package/base-files/files/etc
+rm -rf package/feeds/packages/samba4/files/smb.conf.template
+mv package/base-files/files/etc/samba/smb.conf.template package/feeds/packages/samba4/files
 # sfe开启bbr
-# sed -i '/bbr/s/0/1/g' package/lean/luci-app-sfe/root/etc/config/sfe
+sed -i '/bbr/s/0/1/g' package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改默认root密码
 sed -i 's#root::0#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415#g' package/base-files/files/etc/shadow
 # 设置用户密码
-# sed -i '$a li:$1$Ow7vwy1O$lCGrGnn4g3YKBCFQ60/yJ.:18664:0:99999:7:::' package/base-files/files/etc/shadow
-# sed -i '$a sophie:$1$QSEsYP5O$HphTBwlP28deKNymcaKFf0:18664:0:99999:7:::' package/base-files/files/etc/shadow
-# sed -i '$a xzhhzx222:$1$3L7KoROG$MUcqm4H6jza4/83CBOsSH/:18664:0:99999:7:::' package/base-files/files/etc/shadow
-# sed -i '$a huhan:$1$VVM/wBRG$YhZt0UGd5ciSzNME7sV/c1:18665:0:99999:7:::' package/base-files/files/etc/shadow
+sed -i '$a li:$1$Ow7vwy1O$lCGrGnn4g3YKBCFQ60/yJ.:18664:0:99999:7:::' package/base-files/files/etc/shadow
+sed -i '$a sophie:$1$QSEsYP5O$HphTBwlP28deKNymcaKFf0:18664:0:99999:7:::' package/base-files/files/etc/shadow
+sed -i '$a xzhhzx222:$1$3L7KoROG$MUcqm4H6jza4/83CBOsSH/:18664:0:99999:7:::' package/base-files/files/etc/shadow
+sed -i '$a huhan:$1$VVM/wBRG$YhZt0UGd5ciSzNME7sV/c1:18665:0:99999:7:::' package/base-files/files/etc/shadow
 # 允许外网访问
 sed -i 's/rfc1918_filter 1/rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
 # 开启upnp
 sed -i '/enabled/s/0/1/g' package/feeds/packages/miniupnpd/files/upnpd.config
 # 配置vsftpd
-# rm -rf package/feeds/packages/vsftpd/files/vsftpd.conf
-# mv package/base-files/files/etc/vsftpd.conf package/feeds/packages/vsftpd/files
+rm -rf package/feeds/packages/vsftpd/files/vsftpd.conf
+mv package/base-files/files/etc/vsftpd.conf package/feeds/packages/vsftpd/files
 
 # 添加redsock2
-# svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/ssrplus/redsocks2
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/ssrplus/redsocks2
 
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
@@ -76,12 +76,12 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 # 添加bypass
 #git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
 # 添加dnsfilter
-#git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
+git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # 添加helloworld
-#git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
-#git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
+# git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
+# git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
 # 添加jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
+#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 # 替换openappfilter
 rm -rf package/diy/OpenAppFilter
 git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
@@ -96,7 +96,3 @@ sed -i 's/network/services/g' package/openappfilter/luci-app-oaf/luasrc/view/adm
 # 移动upnp到网络下
 sed -i 's/"services"/"network"/g' package/feeds/luci/luci-app-upnp/luasrc/controller/upnp.lua
 sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_status.htm
-# 移动samba到Nas下
-#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba/luasrc/controller/samba.lua
-# 移动samba4到Nas下
-#sed -i 's/"services"/"nas"/g' package/feeds/luci/luci-app-samba4/luasrc/controller/samba4.lua
