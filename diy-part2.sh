@@ -35,7 +35,7 @@ sed -i '$a sophie:x:1001:100:sophie:/mnt/homes/sophie:/bin/false' package/base-f
 sed -i '$a xzhhzx222:x:1002:100:xzhhzx222:/mnt/homes:/bin/false' package/base-files/files/etc/passwd
 sed -i '$a huhan:x:1003:100:huhan:/mnt/homes/huhan:/bin/false' package/base-files/files/etc/passwd
 # 配置samba4
-svn co https://github.com/xzhhzx222/samlede/trunk/etc package/base-files/files/etc
+svn co https://github.com/xzhhzx222/samlede/branches/samlede/etc package/base-files/files/etc
 rm -rf package/feeds/packages/samba4/files/smb.conf.template
 mv package/base-files/files/etc/samba/smb.conf.template package/feeds/packages/samba4/files
 # sfe开启bbr
