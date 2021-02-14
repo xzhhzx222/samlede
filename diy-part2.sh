@@ -54,7 +54,7 @@ rm -rf package/feeds/packages/vsftpd/files/vsftpd.conf
 mv package/base-files/files/etc/vsftpd.conf package/feeds/packages/vsftpd/files
 
 # 添加pdnsd-alt
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt package/pdnsd-alt
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt package/pdnsd-alt
 
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
