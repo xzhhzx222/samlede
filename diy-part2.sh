@@ -58,23 +58,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt package
 
 # 添加advanced
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
-# 添加argon-config
-#git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
-# 添加dnsfilter
-git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
-# 添加jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
-# 替换openappfilter
-rm -rf package/diy/OpenAppFilter
-git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
 
 # 更改默认主题
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
-
-# 移动appfilter到服务下
-sed -i 's/"network"/"services"/g' package/openappfilter/luci-app-oaf/luasrc/controller/appfilter.lua
-sed -i 's/network/services/g' package/openappfilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
-# 移动upnp到网络下
-sed -i 's/"services"/"network"/g' package/feeds/luci/luci-app-upnp/luasrc/controller/upnp.lua
-sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_status.htm
