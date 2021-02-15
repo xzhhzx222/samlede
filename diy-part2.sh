@@ -25,10 +25,6 @@ sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin
 # 禁用dns缓存
 sed -i '/dnsmasq/a\option cachesize 0' package/network/services/dnsmasq/files/dhcp.conf
 sed -i 's/\(option cachesize\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
-# 开启fullcone nat
-sed -i '/fullcone/s/0/1/g' package/network/config/firewall/files/firewall.config
-# 开启syn_flood
-sed -i '/syn_flood/s/0/1/g' package/network/config/firewall/files/firewall.config
 # 添加用户
 sed -i '$a li:x:1000:100:li:/mnt/homes/li:/bin/false' package/base-files/files/etc/passwd
 sed -i '$a sophie:x:1001:100:sophie:/mnt/homes/sophie:/bin/false' package/base-files/files/etc/passwd
