@@ -34,10 +34,6 @@ sed -i '$a li:x:1000:100:li:/mnt/homes/li:/bin/false' package/base-files/files/e
 sed -i '$a sophie:x:1001:100:sophie:/mnt/homes/sophie:/bin/false' package/base-files/files/etc/passwd
 sed -i '$a xzhhzx222:x:1002:100:xzhhzx222:/mnt/homes:/bin/false' package/base-files/files/etc/passwd
 sed -i '$a huhan:x:1003:100:huhan:/mnt/homes/huhan:/bin/false' package/base-files/files/etc/passwd
-# 配置samba4
-svn co https://github.com/xzhhzx222/samlede/branches/samlede/etc package/base-files/files/etc
-rm -rf package/feeds/packages/samba4/files/smb.conf.template
-mv package/base-files/files/etc/samba/smb.conf.template package/feeds/packages/samba4/files
 # sfe开启bbr
 sed -i '/bbr/s/0/1/g' package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改默认root密码
@@ -49,9 +45,6 @@ sed -i '$a xzhhzx222:$1$3L7KoROG$MUcqm4H6jza4/83CBOsSH/:18664:0:99999:7:::' pack
 sed -i '$a huhan:$1$VVM/wBRG$YhZt0UGd5ciSzNME7sV/c1:18665:0:99999:7:::' package/base-files/files/etc/shadow
 # 允许外网访问
 sed -i 's/rfc1918_filter 1/rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
-# 配置vsftpd
-rm -rf package/feeds/packages/vsftpd/files/vsftpd.conf
-mv package/base-files/files/etc/vsftpd.conf package/feeds/packages/vsftpd/files
 
 # 添加pdnsd-alt
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt package/pdnsd-alt
