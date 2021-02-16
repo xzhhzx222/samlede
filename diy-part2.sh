@@ -49,8 +49,6 @@ sed -i 's/rfc1918_filter 1/rfc1918_filter 0/g' package/network/services/uhttpd/f
 # 开启upnp
 sed -i '/enabled/s/0/1/g' package/feeds/packages/miniupnpd/files/upnpd.config
 
-# 添加pdnsd-alt
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt package/pdnsd-alt
 # 添加redsock2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/ssrplus/redsocks2
 
