@@ -61,23 +61,23 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-adv
 # 添加bypass
 #git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
 # 添加dnsfilter
-git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
+#git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # 添加helloworld
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/vssr/lua-maxminddb
 #git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr/luci-app-vssr
 # 添加jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 # 替换openappfilter
-rm -rf package/diy/OpenAppFilter
-git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
+#rm -rf package/diy/OpenAppFilter
+#git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
 
 # 更改默认主题
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
 
 # 移动appfilter到服务下
-sed -i 's/"network"/"services"/g' package/openappfilter/luci-app-oaf/luasrc/controller/appfilter.lua
-sed -i 's/network/services/g' package/openappfilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
+#sed -i 's/"network"/"services"/g' package/openappfilter/luci-app-oaf/luasrc/controller/appfilter.lua
+#sed -i 's/network/services/g' package/openappfilter/luci-app-oaf/luasrc/view/admin_network/user_status.htm
 # 移动upnp到网络下
 sed -i 's/"services"/"network"/g' package/feeds/luci/luci-app-upnp/luasrc/controller/upnp.lua
 sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_status.htm
