@@ -20,3 +20,6 @@
 sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
 # 添加ssr plus
 sed -i '$a src-git ssrplus https://github.com/fw876/helloworld' feeds.conf.default
+
+# 修改luci版本
+sed -i '/luci/s/17.01/19.07/' feeds.conf.default
