@@ -25,12 +25,14 @@ sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin
 # 禁用dns缓存
 sed -i '/dnsmasq/a\option cachesize 0' package/network/services/dnsmasq/files/dhcp.conf
 sed -i 's/\(option cachesize\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
+# 禁用ipv6解析
+sed -i '/filter_aaaa/s/0/1/g' package/network/services/dnsmasq/files/dhcp.conf
 # 顺序分配ip
 sed -i '/dnsmasq/a\option sequential_ip 1' package/network/services/dnsmasq/files/dhcp.conf
 sed -i 's/\(option sequential_ip\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
 # 调整ip范围
-sed -i '/start/s/100/20/' package/network/services/dnsmasq/files/dhcp.conf
-sed -i '/limit/s/150/50/' package/network/services/dnsmasq/files/dhcp.conf
+sed -i '/start/s/100/20/g' package/network/services/dnsmasq/files/dhcp.conf
+sed -i '/limit/s/150/50/g' package/network/services/dnsmasq/files/dhcp.conf
 # 支持iptv
 sed -i '$a dhcp-option-force=125,00:00:00:00:1a:02:06:48:47:57:2d:43:54:03:04:5a:58:48:4e:0a:02:20:00:0b:02:00:55:0d:02:00:2e' package/network/services/dnsmasq/files/dnsmasq.conf
 sed -i '$a dhcp-option=15' package/network/services/dnsmasq/files/dnsmasq.conf
@@ -44,6 +46,8 @@ sed -i '/syn_flood/s/0/1/g' package/network/config/firewall/files/firewall.confi
 sed -i '/bbr/s/0/1/g' package/lean/luci-app-sfe/root/etc/config/sfe
 # 修改默认root密码
 sed -i 's#root::0#root:$1$yW9piKyc$OT6rrlpcoPRvf1Vk.Zm9N/:18415#g' package/base-files/files/etc/shadow
+# 禁用https重定向
+sed -i '/redirect_https/s/1/0/g' package/network/services/uhttpd/files/uhttpd.config
 # 允许外网访问
 sed -i 's/rfc1918_filter 1/rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
 # 开启upnp
