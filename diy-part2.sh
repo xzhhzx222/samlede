@@ -72,11 +72,6 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-a
 # 替换openappfilter
 rm -rf package/diy/OpenAppFilter
 git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter
-# 替换smartdns
-rm -rf package/feeds/luci/luci-app-smartdns
-rm -rf package/feeds/packages/smartdns
-git clone https://github.com/pymumu/luci-app-smartdns.git package/smartdns/luci-app-smartdns
-git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns/smartdns
 
 # 更改默认主题
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
