@@ -15,6 +15,8 @@
 
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_generate
+# 修改默认主机名称
+sed -i 's/OpenWrt/SamWrt/g' package/base-files/files/bin/config_generate
 # 修改ntp服务器
 sed -i 's/0.openwrt.pool.ntp.org/ntp1.aliyun.com/g' package/base-files/files/bin/config_generate
 sed -i 's/1.openwrt.pool.ntp.org/time1.cloud.tencent.com/g' package/base-files/files/bin/config_generate
