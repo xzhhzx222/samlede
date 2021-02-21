@@ -86,3 +86,5 @@ sed -i 's/network/control/g' package/openappfilter/luci-app-oaf/luasrc/view/admi
 # 移动upnp到网络下
 sed -i 's/"services"/"network"/g' package/feeds/luci/luci-app-upnp/luasrc/controller/upnp.lua
 sed -i 's/services/network/g' package/feeds/luci/luci-app-upnp/luasrc/view/upnp_status.htm
+# 移动wol到管控下
+sed -i 's/"services"/"control"/g' package/feeds/luci/luci-app-wol/luasrc/controller/wol.lua
