@@ -25,6 +25,8 @@ sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/g' package/base-files/files/bin
 # 禁用dns缓存
 sed -i '/dnsmasq/a\option cachesize 0' package/network/services/dnsmasq/files/dhcp.conf
 sed -i 's/\(option cachesize\)/\t\1/' package/network/services/dnsmasq/files/dhcp.conf
+# 禁用ipv6解析
+sed -i '/filter_aaaa/s/0/1/g' package/network/services/dnsmasq/files/dhcp.conf
 # 添加用户
 sed -i '$a li:x:1000:100:li:/mnt/homes/li:/bin/false' package/base-files/files/etc/passwd
 sed -i '$a sophie:x:1001:100:sophie:/mnt/homes/sophie:/bin/false' package/base-files/files/etc/passwd
@@ -39,6 +41,8 @@ sed -i '$a li:$1$Ow7vwy1O$lCGrGnn4g3YKBCFQ60/yJ.:18664:0:99999:7:::' package/bas
 sed -i '$a sophie:$1$QSEsYP5O$HphTBwlP28deKNymcaKFf0:18664:0:99999:7:::' package/base-files/files/etc/shadow
 sed -i '$a xzhhzx222:$1$3L7KoROG$MUcqm4H6jza4/83CBOsSH/:18664:0:99999:7:::' package/base-files/files/etc/shadow
 sed -i '$a huhan:$1$VVM/wBRG$YhZt0UGd5ciSzNME7sV/c1:18665:0:99999:7:::' package/base-files/files/etc/shadow
+# 禁用https重定向
+sed -i '/redirect_https/s/1/0/g' package/network/services/uhttpd/files/uhttpd.config
 # 允许外网访问
 sed -i 's/rfc1918_filter 1/rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
 
