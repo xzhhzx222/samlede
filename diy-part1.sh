@@ -14,8 +14,6 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-# 添加openclash
-#sed -i '$a src-git openclash https://github.com/vernesong/OpenClash.git;master' feeds.conf.default
 # 添加passwall
 sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
 # 添加ssr plus
